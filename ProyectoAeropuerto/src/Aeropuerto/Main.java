@@ -15,7 +15,7 @@ public class Main {
     }
 
     public static void insertarDatosAeropuertos(List<Aeropuerto> aeropuerto){
-        aeropuerto.add(0,new AeropuertoPublico("Aeroparque Jorge Newbery","Buenos Aires", "Argentina",80000));
+        aeropuerto.add(0,new AeropuertoPublico("Aeroparque Jorge Newbery","Buenos Aires", "Argentina",80000, "AEP"));
         aeropuerto.get(0).insertarCompañia(new Compañia("Aerolineas Argentinas"));
         aeropuerto.get(0).insertarCompañia(new Compañia("Sky Airlines"));
         aeropuerto.get(0).insertarCompañia(new Compañia("LATAM"));
@@ -31,7 +31,7 @@ public class Main {
         aeropuerto.get(0).getCompañia("LATAM").getVuelo("JJ8143").insertarPasajero(new Pasajero("Frank Fabra", "colombiana", "00000000"));
         aeropuerto.get(0).getCompañia("LATAM").getVuelo("JJ8083").insertarPasajero(new Pasajero("Juan Perez", "argentina", "15241875"));
 
-        aeropuerto.add(1,new AeropuertoPublico("Aeropuerto Ministro Pistarini","Buenos Aires", "Argentina",100000));
+        aeropuerto.add(1,new AeropuertoPublico("Aeropuerto Ministro Pistarini","Buenos Aires", "Argentina",100000, "EZE"));
         aeropuerto.get(1).insertarCompañia(new Compañia("KLM"));
         aeropuerto.get(1).insertarCompañia(new Compañia("Iberia"));
         aeropuerto.get(1).insertarCompañia(new Compañia("American Airlines"));
@@ -46,6 +46,14 @@ public class Main {
         aeropuerto.get(1).getCompañia("American Airlines").getVuelo("AA900").insertarPasajero(new Pasajero("Antonella Rocuzzo", "argentina", "00011000"));
         aeropuerto.get(1).getCompañia("American Airlines").getVuelo("AA954").insertarPasajero(new Pasajero("Nicolas Perez", "argentina", "15242315"));
 
+        aeropuerto.add(2, new AeropuertoPublico("Aeropuerto de Los Angeles", "Los Angeles", "Estados Unidos", 400, "LAX"));
+        aeropuerto.get(2).insertarCompañia(new Compañia("American Airlines"));
+        aeropuerto.get(2).insertarCompañia(new Compañia("Delta Air Lines"));
+        aeropuerto.get(2).insertarCompañia(new Compañia("American Airlines"));
+        aeropuerto.get(2).insertarCompañia(new Compañia("Air France"));
+        aeropuerto.get(2).insertarCompañia(new Compañia("Hawaiian Airlines"));
+
+        aeropuerto.add(3, new AeropuertoPublico("Aeropuerto Internacional de Atlanta","Atlanta","Estados Unidos",454,"ATL"));
     }
 
     public static void menu(){

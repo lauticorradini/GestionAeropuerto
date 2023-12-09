@@ -7,13 +7,15 @@ public class Aeropuerto {
     private String nombre;
     private String ciudad;
     private String pais;
+    private String codigo;
     private List<Compañia> listaCompañias = new ArrayList<>();
     private int numCompañia;
 
-    public Aeropuerto(String nombre, String ciudad, String pais) {
+    public Aeropuerto(String nombre, String ciudad, String pais, String codigo) {
         this.nombre = nombre;
         this.ciudad = ciudad;
         this.pais = pais;
+        this.codigo = codigo;
         this.numCompañia = 0;
     }
 
@@ -35,6 +37,10 @@ public class Aeropuerto {
 
     public String getPais() {
         return this.pais;
+    }
+
+    public String getCodigo(){
+        return this.codigo;
     }
 
     public List<Compañia> getListaCompañias() {

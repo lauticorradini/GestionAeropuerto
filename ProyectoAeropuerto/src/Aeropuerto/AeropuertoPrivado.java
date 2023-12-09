@@ -7,8 +7,8 @@ public class AeropuertoPrivado extends Aeropuerto {
     private List<String> listaEmpresas = new ArrayList<String>();
     private int numEmpresa;
 
-    public AeropuertoPrivado(String nombre, String ciudad, String pais) {
-        super(nombre, ciudad, pais);
+    public AeropuertoPrivado(String nombre, String ciudad, String pais, String codigo) {
+        super(nombre, ciudad, pais, codigo);
     }
 
     public AeropuertoPrivado(String nombre, String ciudad, String pais, ArrayList<Compañia> compañias, ArrayList<String> empresa){
