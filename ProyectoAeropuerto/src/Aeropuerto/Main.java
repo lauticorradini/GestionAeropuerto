@@ -46,14 +46,49 @@ public class Main {
         aeropuerto.get(1).getCompañia("American Airlines").getVuelo("AA900").insertarPasajero(new Pasajero("Antonella Rocuzzo", "argentina", "00011000"));
         aeropuerto.get(1).getCompañia("American Airlines").getVuelo("AA954").insertarPasajero(new Pasajero("Nicolas Perez", "argentina", "15242315"));
 
-        aeropuerto.add(2, new AeropuertoPublico("Aeropuerto de Los Angeles", "Los Angeles", "Estados Unidos", 400, "LAX"));
-        aeropuerto.get(2).insertarCompañia(new Compañia("American Airlines"));
+        aeropuerto.add(2, new AeropuertoPublico("Los Angeles International Airport", "Los Angeles", "Estados Unidos", 1500000, "LAX"));
         aeropuerto.get(2).insertarCompañia(new Compañia("Delta Air Lines"));
         aeropuerto.get(2).insertarCompañia(new Compañia("American Airlines"));
-        aeropuerto.get(2).insertarCompañia(new Compañia("Air France"));
-        aeropuerto.get(2).insertarCompañia(new Compañia("Hawaiian Airlines"));
+        aeropuerto.get(2).insertarCompañia(new Compañia("United Airlines"));
+        aeropuerto.get(2).getCompañia("Delta Air Lines").insertarVuelo(new Vuelo("DL201", "Los Angeles", "New York", 400000, 250));
+        aeropuerto.get(2).getCompañia("American Airlines").insertarVuelo(new Vuelo("AA105", "Los Angeles", "Chicago", 250000, 180));
+        aeropuerto.get(2).getCompañia("United Airlines").insertarVuelo(new Vuelo("UA302", "Los Angeles", "Houston", 300000, 200));
+        aeropuerto.get(2).getCompañia("Delta Air Lines").getVuelo("DL201").insertarPasajero(new Pasajero("Emily Johnson", "estadounidense", "87654321"));
+        aeropuerto.get(2).getCompañia("American Airlines").getVuelo("AA105").insertarPasajero(new Pasajero("Michael Smith", "estadounidense", "98765432"));
 
-        aeropuerto.add(3, new AeropuertoPublico("Aeropuerto Internacional de Atlanta","Atlanta","Estados Unidos",454,"ATL"));
+
+        aeropuerto.add(3, new AeropuertoPublico("Aeropuerto Internacional Jorge Chavez", "Lima", "Peru", 700000, "LIM"));
+        aeropuerto.get(3).insertarCompañia(new Compañia("LATAM"));
+        aeropuerto.get(3).insertarCompañia(new Compañia("Viva Air"));
+        aeropuerto.get(3).insertarCompañia(new Compañia("Sky Airlines"));
+        aeropuerto.get(3).getCompañia("LATAM").insertarVuelo(new Vuelo("LA800", "Lima", "Madrid", 600000, 250));
+        aeropuerto.get(3).getCompañia("Viva Air").insertarVuelo(new Vuelo("VV102", "Lima", "Bogotá", 150000, 120));
+        aeropuerto.get(3).getCompañia("Sky Airlines").insertarVuelo(new Vuelo("SKU712", "Lima", "Quito", 120000, 100));
+        aeropuerto.get(3).getCompañia("Viva Air").getVuelo("VV102").insertarPasajero(new Pasajero("Ana Martinez", "peruana", "98765432"));
+        aeropuerto.get(3).getCompañia("Sky Airlines").getVuelo("SKU712").insertarPasajero(new Pasajero("Carlos Sanchez", "ecuatoriano", "12345678"));
+
+
+        aeropuerto.add(4, new AeropuertoPublico("Hartsfield-Jackson Atlanta International Airport", "Atlanta", "Estados Unidos", 1200000, "ATL"));
+        aeropuerto.get(4).insertarCompañia(new Compañia("Delta Air Lines"));
+        aeropuerto.get(4).insertarCompañia(new Compañia("Southwest Airlines"));
+        aeropuerto.get(4).insertarCompañia(new Compañia("JetBlue Airways"));
+        aeropuerto.get(4).getCompañia("Delta Air Lines").insertarVuelo(new Vuelo("DL401", "Atlanta", "Los Angeles", 450000, 280));
+        aeropuerto.get(4).getCompañia("Southwest Airlines").insertarVuelo(new Vuelo("WN205", "Atlanta", "Denver", 200000, 150));
+        aeropuerto.get(4).getCompañia("JetBlue Airways").insertarVuelo(new Vuelo("B623", "Atlanta", "New York", 300000, 200));
+        aeropuerto.get(4).getCompañia("Delta Air Lines").getVuelo("DL401").insertarPasajero(new Pasajero("David Brown", "estadounidense", "76543210"));
+        aeropuerto.get(4).getCompañia("Southwest Airlines").getVuelo("WN205").insertarPasajero(new Pasajero("Jessica White", "estadounidense", "87654321"));
+
+        aeropuerto.add(5, new AeropuertoPublico("Aeropuerto Internacional El Dorado", "Bogotá", "Colombia", 950000, "BOG"));
+        aeropuerto.get(5).insertarCompañia(new Compañia("Avianca"));
+        aeropuerto.get(5).insertarCompañia(new Compañia("Copa Airlines"));
+        aeropuerto.get(5).insertarCompañia(new Compañia("LATAM"));
+        aeropuerto.get(5).getCompañia("Avianca").insertarVuelo(new Vuelo("AV202", "Bogotá", "Miami", 250000, 180));
+        aeropuerto.get(5).getCompañia("Avianca").insertarVuelo(new Vuelo("AV504", "Bogotá", "Lima", 180000, 120));
+        aeropuerto.get(5).getCompañia("Copa Airlines").insertarVuelo(new Vuelo("CM708", "Bogotá", "Panama City", 120000, 100));
+        aeropuerto.get(5).getCompañia("LATAM").insertarVuelo(new Vuelo("LA710", "Bogotá", "Santiago", 400000, 200));
+        aeropuerto.get(5).getCompañia("LATAM").getVuelo("LA710").insertarPasajero(new Pasajero("Camila Rodriguez", "colombiana", "12345678"));
+        aeropuerto.get(5).getCompañia("Avianca").getVuelo("AV202").insertarPasajero(new Pasajero("John Smith", "estadounidense", "98765432"));
+
     }
 
     public static void menu(){
@@ -62,7 +97,7 @@ public class Main {
         Aeropuerto aeropuerto;
         Compañia compañia;
         do {
-            System.out.println("\t.:MENU:.");
+            System.out.println("\t--------MENU--------");
             System.out.println("1. Ver Aeropuertos gestionados");
             System.out.println("2. Ver empresas o subvencion");
             System.out.println("3. Listar compañias de un Aeropuerto");
